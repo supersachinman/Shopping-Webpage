@@ -29,8 +29,8 @@
 			        <li><a href="#">Books and More</a></li>
 			    </ul>
 		    	<ul class="nav navbar-nav navbar-right" id="cart">
-		        	<li class="dropdown active">
-			      		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cart-arrow-down" aria-hidden="true"> </i> Shopping Cart <!-- <span class="caret"></span> --></a>
+		        	<li class="dropdown">
+			      		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="awesome"><i class="fa fa-cart-arrow-down" aria-hidden="true"> </i> Shopping Cart <!-- <span class="caret"></span> --></a>
 			        	<ul class="dropdown-menu" id="items">
 			          		
 			        	</ul>
@@ -103,6 +103,20 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <script src="shopping.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	var drop = document.getElementById("awesome");
+	drop.addEventListener("mouseover", over);
+	drop.addEventListener("mouseout", out);
+
+	function over(){
+		document.getElementById("items").style.display = "block";
+	}
+
+	function out(){
+		document.getElementById("items").style.display = "none";
+	}
+</script>
 
 </body>
 </html>
